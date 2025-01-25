@@ -3,20 +3,19 @@
 
 
 <suite name="Master Suite">
-	<listeners>
-		<!-- this listner is for extent report into project -->
+		<listeners>
+		 <!-- this listner is for extent report into project--> 
 		<listener class-name="utilities.ExtentReportManager"/> 
-			
 	</listeners>
-
   <test thread-count="5" name="Test">
   <parameter name="os" value="Window"/> 	
   <parameter name="browser" value="chrome"/>
  
     <classes>
-       <class name="testCases.TC001_AccountRegistrationTest"/> 
-   		 <class name="testCases.TC002_AccountLoginTest"/>
-		  <!--  <class name="testCases.TC003_LoginDDT"/>-->
+		<class name="testCases.TC001_AccountRegistrationTest"/> 
+		<class name="testCases.TC002_AccountLoginTest"/>
+	    <class name="testCases.TC003_LoginDDT"/>
+		<class name="testCases.TC004_EndToEndTest"/>   
 
     </classes>
   </test> <!-- Test -->

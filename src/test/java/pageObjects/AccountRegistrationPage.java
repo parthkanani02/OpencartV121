@@ -35,6 +35,10 @@ public class AccountRegistrationPage extends BasePage{
 	@FindBy(xpath = "//h1[normalize-space()='Your Account Has Been Created!']")
 	WebElement msfConfirmation;
 	
+	@FindBy(xpath = "//a[normalize-space()='Continue']")
+	WebElement clickconlast;
+	
+	
 	public void setFirstName(String fname) {
 		txtFirstname.sendKeys(fname);
 	}
@@ -54,16 +58,21 @@ public class AccountRegistrationPage extends BasePage{
 	}
 	
 	public void setPrivacyPolicy() {
-		Actions act = new Actions(driver);
-		act.keyDown(Keys.TAB).keyUp(Keys.TAB).perform();
-		act.keyDown(Keys.TAB).keyUp(Keys.TAB).perform();
-		act.keyDown(Keys.TAB).keyUp(Keys.TAB).perform();
-		act.keyDown(Keys.SPACE).keyUp(Keys.SPACE).perform();
+		
+		
+		  Actions act = new Actions(driver);
+		  act.keyDown(Keys.TAB).keyUp(Keys.TAB).perform();
+		  act.keyDown(Keys.TAB).keyUp(Keys.TAB).perform();
+		  act.keyDown(Keys.TAB).keyUp(Keys.TAB).perform();
+		  act.keyDown(Keys.SPACE).keyUp(Keys.SPACE).perform(); 
+		
 //		chkPolicy.click();
+		
+//		Actions act = new Actions(driver);
+//		act.moveToElement(chkPolicy).click().build().perform();
 	}
 	
 	public void clickContinue(){
-	System.out.println("Inside of ClickContinue");
 //	Actions act = new Actions(driver);
 //	act.keyDown(Keys.TAB).keyUp(Keys.TAB).perform();
 //	act.keyDown(Keys.SPACE).keyUp(Keys.SPACE).perform();
@@ -99,6 +108,10 @@ public class AccountRegistrationPage extends BasePage{
 		catch (Exception e) {
 			return (e.getMessage());
 		}
+	}
+	
+	public void clickcontinuelast() {
+		clickconlast.click();
 	}
 	
 }

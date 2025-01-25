@@ -10,6 +10,7 @@ import java.util.Date;
 import java.util.Properties;
 
 import org.apache.commons.lang3.RandomStringUtils;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.TakesScreenshot;
@@ -30,6 +31,7 @@ import org.apache.logging.log4j.Logger; // Careful while adding import for log (
 public class BaseClass {
 
 	public static WebDriver driver;	
+	public JavascriptExecutor js;
 	public Logger logger; //log4j
 	public Properties p;
 	
@@ -139,5 +141,4 @@ public class BaseClass {
 		sourceFile.renameTo(targetFile);
 		return targetFilePath;
 	}
-	
 }

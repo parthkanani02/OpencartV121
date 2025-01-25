@@ -8,20 +8,13 @@
     <parameter name="os" value="Window"/>
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="testCases.TC002_AccountLoginTest">
+      <class name="testCases.TC003_LoginDDT">
         <methods>
           <include name="tearDown"/>
-          <include name="verify_login"/>
+          <include name="verify_LoginDDT" invocation-numbers="3 6 7 8 9"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- testCases.TC002_AccountLoginTest -->
-      <class name="testCases.TC001_AccountRegistrationTest">
-        <methods>
-          <include name="tearDown"/>
-          <include name="setup"/>
-          <include name="verify_account_Registration"/>
-        </methods>
-      </class> <!-- testCases.TC001_AccountRegistrationTest -->
+      </class> <!-- testCases.TC003_LoginDDT -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Master Suite] -->
