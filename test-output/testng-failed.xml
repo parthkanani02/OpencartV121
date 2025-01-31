@@ -5,16 +5,16 @@
     <listener class-name="utilities.ExtentReportManager"/>
   </listeners>
   <test thread-count="5" name="Test(failed)">
-    <parameter name="os" value="Window"/>
+    <parameter name="os" value="Linux"/>
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="testCases.TC003_LoginDDT">
+      <class name="testCases.TC001_AccountRegistrationTest">
         <methods>
           <include name="tearDown"/>
-          <include name="verify_LoginDDT" invocation-numbers="3 6 7 8 9"/>
           <include name="setup"/>
+          <include name="verify_account_Registration"/>
         </methods>
-      </class> <!-- testCases.TC003_LoginDDT -->
+      </class> <!-- testCases.TC001_AccountRegistrationTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Master Suite] -->

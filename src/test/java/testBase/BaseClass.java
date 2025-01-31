@@ -57,11 +57,11 @@ public class BaseClass {
 			 {
 				 capabilities.setPlatform(Platform.WIN10);
 			 }
-			 else if (os.equalsIgnoreCase("mac"))
+			 else if (os.equalsIgnoreCase("Mac"))
 			 {
 				 capabilities.setPlatform(Platform.MAC);
 			 }
-			 else if (os.equalsIgnoreCase("linux"))
+			 else if (os.equalsIgnoreCase("Linux"))
 			 {
 				 capabilities.setPlatform(Platform.LINUX);
 			 }
@@ -80,9 +80,7 @@ public class BaseClass {
 			}
 			
 			driver = new RemoteWebDriver( new URL ("http://localhost:4444/wd/hub"),capabilities);
-			
 		}
-		
 		if(p.getProperty("execution_env").equals("local"))
 		{
 			switch(br.toLowerCase())
